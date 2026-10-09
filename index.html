@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My LifeOS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <h1 class="logo">My LifeOS</h1>
+
+        <nav class="navigation">
+          <a href="#dashboard" onclick="handleNavClick('dashboard')" class="nav-link active" name="dashboard">Dashboard</a>
+          <a href="#tasks" onclick="handleNavClick('tasks')" class="nav-link" name="tasks">Tasks</a>
+          <a href="#habits" onclick="handleNavClick('habits')" class="nav-link" name="habits">Habits</a>
+          <a href="#goals" onclick="handleNavClick('goals')" class="nav-link" name="goals">Goals</a>
+          <a href="#wisdomvault" onclick="handleNavClick('wisdomvault')" class="nav-link" name="wisdomVault">Wisdom Vault</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <a href="#settings" onclick="handleNavClick('settings')" class="nav-link" name="settings">Settings</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <h2 id="greet-message">Good Evening</h2>
+          <p class="sub-header" id="date-display">Thursday, October 1, 2026</p>
+        </header>
+
+        <h1 id="page-title"></h1>
+        <div id="page-content"></div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
