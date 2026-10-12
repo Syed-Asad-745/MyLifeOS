@@ -116,7 +116,7 @@ const pages = {
   settings: {
     title: "Settings",
     content: `
-    <section settings-page>
+    <section class="settings-page">
       <p>Change settings as per your preferences</p>
 
       <div id="settings-options">
