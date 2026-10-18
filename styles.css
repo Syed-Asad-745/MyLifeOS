@@ -20,7 +20,6 @@
 
 body {
   color: var(--color-accent-shade-2);
-  font-family: sans-serif;
 }
 
 .app {
@@ -29,9 +28,11 @@ body {
 }
 
 .sidebar {
-  position: fixed;
+  position: sticky;
+  top: 0;
   height: 100vh;
-  width: 15%;
+  min-width: 15%;
+  width: fit-content;
   background: var(--color-accent-shade-3);
   border-right: 1px solid var(--color-accent-shade-2);
   padding: 24px;
@@ -39,18 +40,34 @@ body {
   flex-direction: column;
 }
 
-.logo {
-  margin-bottom: 40px;
+.main-content {
+  width: 85%;
+  background: var(--color-accent-shade-4);
+  padding: 32px;
+}
+
+#sidebar-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 55px;
+  gap: 16px;
+}
+
+#app-logo {
+  height: 3rem;
+  width: 3rem;
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
 }
 
 .nav-link {
   text-decoration: none;
+  font-size: 1.5em;
   padding: 10px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -70,13 +87,7 @@ body {
 
 .sidebar-bottom {
   margin-top: auto;
-}
-
-.main-content {
-  margin-left: 15%;
-  width: 100%;
-  background: var(--color-accent-shade-4);
-  padding: 32px;
+  margin-bottom: 24px;
 }
 
 .topbar {
@@ -84,10 +95,6 @@ body {
 }
 .topbar h2 {
   margin-bottom: 8px;
-}
-
-.sub-header {
-  color: var(--color-accent-shade-2);
 }
 
 .dashboard-grid {
@@ -103,7 +110,6 @@ body {
   background: var(--color-accent-shade-3);
   border-radius: 10px;
   padding: 24px;
-  cursor: pointer;
   transition: all 0.3s ease;
   aspect-ratio: 3/1;
   display: flex;
@@ -113,13 +119,17 @@ body {
 .card:hover {
   border: 1px solid var(--color-accent-shade-1);
   transform: translateY(-12px) scale(1.2);
-  box-shadow: 0px 12px 12px var(--color-accent-shade-1);
+  box-shadow: 0px 0px 12px var(--color-accent-shade-1);
 }
-
+.card h3 {
+  text-decoration: underline;
+  font-size: 2rem;
+}
 .card p {
   color: var(--color-accent-shade-2);
   margin-top: auto;
   margin-bottom: auto;
+  font-size: 1.3rem;
 }
 
 #task-form {

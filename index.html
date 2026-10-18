@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My LifeOS</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/lifeos-icon.png" />
   </head>
 
   <body>
     <div class="app">
       <aside class="sidebar">
-        <h1 class="logo">My LifeOS</h1>
+        <div id="sidebar-top">
+          <img src="lifeos-icon.png" alt="app-logo" id="app-logo" />
+          <h1 id="app-title">My LifeOS</h1>
+        </div>
 
         <nav class="navigation">
           <a href="#dashboard" onclick="handleNavClick('dashboard')" class="nav-link active" name="dashboard">Dashboard</a>
